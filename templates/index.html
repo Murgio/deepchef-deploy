@@ -1,0 +1,74 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Recipes | DeepChef</title>
+        <META name="author" content="Muriz Serifovic">
+        <META name="copyright" content="&copy; 2019 Muriz Serifovic">
+        <META name="keywords" content="chef,recipes,food">
+        <META name="date" content="2018-11-13T20:49:37+00:00">
+        <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+        <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-beta.2/lazyload.js"></script>
+        <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+        <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
+    </head>
+    <!--<form id="upload-file" method="post" enctype="multipart/form-data">
+        <label for="imageUpload" class="upload-label">
+        Add Image
+        </label>
+        <input type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg">
+    </form>-->
+    <body>
+        <div class="message">
+            Sorry, your browser does not support this technology. 😅
+        </div>
+        <header class="header sticky sticky--top js-header">
+            <div class="grid_top">
+                <nav class="navigation">
+                <ul class="navigation__list navigation__list--inline">
+                    <li class="navigation__item">
+                        <a href="#">DeepChef</a>
+                    </li>
+                </ul>
+                </nav>
+            </div>
+        </header>
+
+        <section class="section">
+
+            <div class="file-upload">
+                <div class="btn-wrapper">
+                    <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger('click')">Add Image</button>
+                </div>
+                <div class="image-upload-wrap">
+                    <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
+                    <div class="drag-text">
+                        <h3>Drag and drop an image</h3>
+                    </div>
+                </div>
+                <div class="file-upload-content">
+                    <img class="file-upload-image" src="#" alt="your image" />
+                    <div class="image-title-wrap">
+                        <button type="button" onclick="removeUpload()" class="remove-image">
+                        <span class="image-title">Uploaded Image</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="food_feed">
+                <h1>Recipes</h1>
+                <div class="boxLoading"></div>
+                <div class="grid">
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>
+                Crafted with <span style="color: #E37B66;">&#9829;</span> in Switzerland © Muriz Serifovic
+            </p>
+            <script src="{{ url_for('static', filename='js/main.js') }}" type="text/javascript"></script>   
+        </footer>
+    </body>
+</html>
