@@ -119,7 +119,7 @@ if __name__ == '__main__':
     parser = ChefkochParser()
     predict_food_result = PredictFood(k=20)
     #logger = LogFood(path='meta/log_food.json')
-    app.run(host='0.0.0.0', port=5000, debug=False)
+    app.run(host='0.0.0.0', port=5042, debug=False)
 
     # Serve the app with gevent
     #http_server = WSGIServer(('', 5000), app)

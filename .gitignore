@@ -1,0 +1,5 @@
+__pycache__/
+.vscode/
+models/
+uploads/
+meta/chefkoch.csv
